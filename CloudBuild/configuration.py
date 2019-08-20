@@ -217,19 +217,13 @@ class Configuration(object):
                     'key': 'Authorization',
                     'value': self.get_basic_auth_token()
                 },
-				# 'permissions':
-				#     {
-				#         'type': 'oauth2',
-				#         'in': 'header',
-				#         'key': 'Authorization',
-				#         'value': 'Bearer ' + self.access_token
-				#     },
+
             'permissions':
                 {
-                    'type': 'basic',
+                    'type': 'oauth2',
                     'in': 'header',
                     'key': 'Authorization',
-                    'value': self.get_basic_auth_token()
+                    'value': 'Bearer ' + self.access_token
                 },
 
         }
